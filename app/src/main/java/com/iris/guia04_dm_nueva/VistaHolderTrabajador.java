@@ -20,7 +20,7 @@ public class VistaHolderTrabajador extends RecyclerView.ViewHolder  {
         this.tipoTrabajador = itemView.findViewById(R.id.txTipoTrabajador);
         this.totalPagar = itemView.findViewById(R.id.txTotalTrabajador);
     }
-
+//hola
     public TextView getCodigoPersona() {
         return IdPersona;
     }
