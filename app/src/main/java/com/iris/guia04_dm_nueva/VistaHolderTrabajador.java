@@ -2,39 +2,38 @@ package com.iris.guia04_dm_nueva;
 
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class VistaHolderTrabajador extends RecyclerView.ViewHolder  {
 
-    private TextView CPersona;
-    private TextView NPersona;
-    private TextView TTrabajador;
-    private TextView TPagar;
+    private TextView IdPersona;
+    private TextView nomPersona;
+    private TextView tipoTrabajador;
+    private TextView totalPagar;
 
 
     public VistaHolderTrabajador(@NonNull View itemView) {
         super(itemView);
-        this.CPersona = itemView.findViewById(R.id.txvCPersona);
-        this.NPersona = itemView.findViewById(R.id.txvNPersona);
-        this.TTrabajador = itemView.findViewById(R.id.txvTTrabajador);
-        this.TPagar = itemView.findViewById(R.id.txvTTrabajador);
+        this.IdPersona = itemView.findViewById(R.id.texIDPersona);
+        this.nomPersona = itemView.findViewById(R.id.texnombrePersona);
+        this.tipoTrabajador = itemView.findViewById(R.id.txTipoTrabajador);
+        this.totalPagar = itemView.findViewById(R.id.txTotalTrabajador);
     }
 
-    public TextView getCPersona() {
-        return CPersona;
+    public TextView getCodigoPersona() {
+        return IdPersona;
     }
 
-    public TextView getNPersona() {
-        return NPersona;
+    public TextView getNombrePersona() {
+        return nomPersona;
     }
 
-    public TextView getTTrabajador() {
-        return TTrabajador;
+    public TextView getTipoTrabajador() {
+        return tipoTrabajador;
     }
 
-    public TextView getTPagar() {
-        return TPagar;
+    public TextView getTotalPagar() {
+        return totalPagar;
     }
 }

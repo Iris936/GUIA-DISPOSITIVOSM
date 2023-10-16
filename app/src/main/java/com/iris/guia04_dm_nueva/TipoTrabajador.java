@@ -4,26 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
+
+import com.iris.guia04_dm_nueva.databinding.ActivityTipoTrabajadorBinding;
+
 public class TipoTrabajador extends AppCompatActivity {
 
-    private Button BSiguiente;
-    private RadioGroup rgTrabajadores;
+    private ActivityTipoTrabajadorBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tipo_trabajador);
-        BSiguiente = findViewById(R.id.btnSiguiente);
-        rgTrabajadores = findViewById(R.id.rgTrabajadores);
-        ((RadioButton)rgTrabajadores.getChildAt(0)).setChecked(true);
+        binding = ActivityTipoTrabajadorBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        BSiguiente.setOnClickListener(v -> {
-            RadioButton selectedRadioButton = findViewById(rgTrabajadores.getCheckedRadioButtonId());
+        binding.Siguiente.setOnClickListener(v -> {
+            RadioButton selectedRadioButton = findViewById(binding.Trabajadores.getCheckedRadioButtonId());
             boolean idSelected = selectedRadioButton.getText().toString().contains("hora");
             finish();
-            startActivity(new Intent(TipoTrabajador.this, idSelected ? AggTrabajadorH.class : AggTrabajadorC.class ));
+            startActivity(new Intent(TipoTrabajador.this, idSelected ? AggTrabajadorH.class : AggTrabajadorC.class));
         });
     }
 }
+

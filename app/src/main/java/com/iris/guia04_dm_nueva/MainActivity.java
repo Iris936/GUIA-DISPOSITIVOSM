@@ -5,31 +5,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
+import com.iris.guia04_dm_nueva.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button BAcerca;
-    private Button BMostrar;
-    private Button BAgregarTrabajador;
+    private ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        BAcerca= findViewById(R.id.BAcerca);
-        BAgregarTrabajador = findViewById(R.id.BAgregarTrabajador);
-        BMostrar = findViewById(R.id.BMostrar);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
 
-        BAgregarTrabajador.setOnClickListener(v -> {
+        binding.BAgregarTrabajador.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, TipoTrabajador.class));
         });
 
-        BMostrar.setOnClickListener(v -> {
+        binding.BMostrar.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, ListarTrabajadores.class));
-            //ok
-
         });
-        BAcerca.setOnClickListener(new View.OnClickListener(){
 
+        binding.BAcerca.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AcercaDe.class);
@@ -38,3 +36,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+

@@ -9,7 +9,6 @@
     app:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp">
@@ -23,7 +22,7 @@
             android:text="Código: "/>
 
         <TextView
-            android:id="@+id/txvCodigoPersona"
+            android:id="@+id/texIDPersona"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@id/txvCPersona"
@@ -42,18 +41,18 @@
             android:text="Nombre: "/>
 
         <TextView
-            android:id="@+id/txvNombrePersona"
+            android:id="@+id/texnombrePersona"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/txvCodigoPersona"
+            app:layout_constraintTop_toBottomOf="@id/texIDPersona"
             app:layout_constraintStart_toEndOf="@id/txvNPersona"
             app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="No asignado" />
 
         <TextView
-            android:id="@+id/txvTPTrabajador"
+            android:id="@+id/txTPTrabajador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -62,35 +61,35 @@
             android:text="Tipo trabajador: "/>
 
         <TextView
-            android:id="@+id/txvTipoTrabajador"
+            android:id="@+id/txTipoTrabajador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/txvNombrePersona"
-            app:layout_constraintStart_toEndOf="@id/txvTPTrabajador"
+            app:layout_constraintTop_toBottomOf="@id/texnombrePersona"
+            app:layout_constraintStart_toEndOf="@id/txTPTrabajador"
             app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="No asignado" />
 
         <TextView
-            android:id="@+id/txvTTrabajador"
+            android:id="@+id/txTTrabajador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txvTPTrabajador"
+            app:layout_constraintTop_toBottomOf="@id/txTPTrabajador"
             android:text="Total Neto: "/>
 
         <TextView
-            android:id="@+id/txvTotalTrabajador"
+            android:id="@+id/txTotalTrabajador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/txvTipoTrabajador"
-            app:layout_constraintStart_toEndOf="@id/txvTTrabajador"
             app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txTipoTrabajador"
+            app:layout_constraintStart_toEndOf="@id/txTTrabajador"
             android:text="No asignado" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

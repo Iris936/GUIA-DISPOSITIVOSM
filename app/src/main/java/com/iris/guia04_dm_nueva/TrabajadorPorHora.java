@@ -20,7 +20,7 @@ public class TrabajadorPorHora extends Trabajador{
         return NHoras;
     }
 
-    public void setNHoras(int numeroHoras) {
+    public void setNHoras(int NHoras) {
         this.NHoras = NHoras;
     }
 

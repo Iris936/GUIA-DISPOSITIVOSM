@@ -30,5 +30,7 @@ public class RepositorioTrabajador {
         return this.mainList.add(mainObject);
     }
 
+    public void removeTrabajador(Trabajador trabajador) {
+    }
 }
 

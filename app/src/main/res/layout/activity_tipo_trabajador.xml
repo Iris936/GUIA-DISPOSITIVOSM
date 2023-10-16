@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/rm218batch10_mynt_05"
     android:textColor="@color/white"
-    tools:context=".TipoTrabajador">
+    tools:context="TipoTrabajador">
 
     <TextView
         android:id="@+id/textView5"
@@ -22,7 +22,7 @@
         tools:layout_editor_absoluteX="163dp" />
 
     <RadioGroup
-        android:id="@+id/rgTrabajadores"
+        android:id="@+id/Trabajadores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -35,7 +35,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <RadioButton
-            android:id="@+id/TipoTH"
+            android:id="@+id/TipoPorHora"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -49,7 +49,7 @@
             android:textSize="20sp" />
 
         <RadioButton
-            android:id="@+id/TipoTC"
+            android:id="@+id/TipoTraCom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -64,19 +64,19 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btnSiguiente"
+        android:id="@+id/Siguiente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="@color/design_default_color_error"
+        android:backgroundTint="@color/material_dynamic_primary40"
         android:text="Siguiente"
         android:textColor="@color/white"
         android:textSize="21sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rgTrabajadores" />
+        app:layout_constraintTop_toBottomOf="@+id/Trabajadores" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
